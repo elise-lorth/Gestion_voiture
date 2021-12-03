@@ -1,0 +1,175 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+    margin-top: 12px;
+    margin-left: 15px;
+}
+
+h2 {
+    margin-bottom: 3px;
+    margin-top: 3px;
+}
+
+.hr-gras{
+    border-top: 5px dotted;
+    color: #29b08b
+}
+
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.chart-container {
+    position: relative;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: fit-content;
+    padding: 10px;
+}
+
+.ensembleLed{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.ensembleBouton {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.ensemble-4-boutons-direction{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+.ensemble-2-boutons-direction{
+    display: flex;
+    flex-direction: column;
+}
+.ensemble-bras-moteur{
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Mise en forme de la marge et de l'aspect des petits boutons*/
+.smallButton {
+    margin: 10px;
+    background-color: #60a697;
+    color: #c4f1e0;
+    padding: 9px 12px 5px;
+    border-radius: 12px;
+    font-size: 18px;
+    transition-duration: 0.4s;
+}
+
+.bigButton {
+    margin: 3px;
+    background-color: #60a697;
+    color: #c4f1e0;
+    padding: 10px 13px 5px;
+    border-radius: 12px;
+    font-size: 30px;
+    transition-duration: 0.4s;
+}
+
+.sansMarge{
+    margin-bottom: 1px;
+    margin-top: 1px;
+}
+.margeDroite{
+    margin-right: 10px;
+}
+.margeGauche{
+    margin-left: 20px;
+}
+
+/*couleur des icones menu*/
+.couleur-verte{
+    color: #33a284;
+}
+
+/* animation boutons */
+.button:hover {
+    background-color: #2b2b2b;
+    color: white;
+}
+
+footer {
+    background: rgba(181, 247, 229, 0.41);
+}
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #60a697;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #60a697;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
