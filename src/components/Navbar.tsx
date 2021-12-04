@@ -16,7 +16,8 @@ function Navbar() {
                 <Link to='#' className='menu-bars'>
                     <FaIcons.FaBars onClick={showSidebar} className='couleur-verte'/>
                 </Link>
-                <h1>Super titre</h1>
+                <h1>Pilote ta voiture</h1>
+                <img src="Logo.png" height="75" alt="Logo" style={{position: 'absolute', top: '4px', right: '10px'}}/>
             </div>
             <nav className={sidebar ? 'nav-menu active' : 'nav-menu'}>
                 <ul className='nav-menu-items' onClick={showSidebar}>
@@ -35,7 +36,10 @@ function Navbar() {
                             </li>
                         );
                     })}
+                    <br/><br/>
+                    <img src="Logo.png" height="220" alt="Logo" style={{position: 'absolute', left: '15px'}}/>
                 </ul>
+
             </nav>
         </>
     );
