@@ -1,9 +1,7 @@
 import * as MdIcons from "react-icons/md";
 import React from "react";
 import NumericInput from "react-numeric-input";
-// import * as NumericInput from 'react-numeric-input';
-{/*https://react-icons.github.io/react-icons/*/
-}
+{/*https://react-icons.github.io/react-icons/*/}
 
 function VoitureAffichage(this: any) {
 
@@ -13,7 +11,7 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + speed + " " + time})
+            body: JSON.stringify({data_: "move " + speed + " " + time  + " forward"})
         };
         fetch("/api", requestOptions);
     }

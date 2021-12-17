@@ -49,6 +49,20 @@ code {
     align-items: center;
 }
 
+.ensembleBoutonPhoto{
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.image-au-centre{
+    display: flex;
+    justify-content: center;
+}
+
+
 .ensemble-4-boutons-direction{
     display: flex;
     flex-direction: row;
