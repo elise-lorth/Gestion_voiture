@@ -11,7 +11,7 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + speed + " " + time  + " forward"})
+            body: JSON.stringify({data_: "move " + speed + " " + time + " forward"})
         };
         fetch("http://localhost:3001/api", requestOptions);
     }
@@ -44,7 +44,7 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + 35 + " " + 1 + " forward"})
+            body: JSON.stringify({data_: "move " + 50 + " " + 1 + " forward"})
         };
         fetch("http://localhost:3001/api", requestOptions);
     }
@@ -55,7 +55,7 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + 35 + " " + 1 + " backward"})
+            body: JSON.stringify({data_: "move " + 50 + " " + 1 + " backward"})
         };
         fetch("http://localhost:3001/api", requestOptions);
     }
