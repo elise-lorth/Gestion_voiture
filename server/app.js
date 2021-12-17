@@ -25,12 +25,8 @@ app.use(function(req, res, next) {
 app.use(express.json())
 
 app.post("/api", (req, res) => {
-    // console.log(req.body.data_);
-    console.log("'"+req.body.data_+"'")
-    data_ = '"'+req.body.data_+'"'
-    Publisher(data_);
     res.json({ message: "request received" });
-    // Publisher(req.body.data_);
+    Publisher(req.body.data_);
 });
 
 // Connection
@@ -44,19 +40,19 @@ const client = mqtt.connect(connectUrl, {
   })
 
 
-// data_ = "paparazzi ."
+// data_ = "light true true 0"
 function Publisher(data) {
-    console.log("Publishe", data)
     // Publish message
     client.on('connect', () => {
         client.subscribe([topic], () => {
             console.log(`Subscribe to topic '${topic}'`)
           })
-        client.publish(topic, data, { qos: 0, retain: false }, (error) => {
-        if (error) {
-            console.error(error)
-        }
-        })
+    })
+    client.publish(topic, data, { qos: 0, retain: false }, (error) => {
+      console.log("Publish", data)
+      if (error) {
+          console.error(error)
+      }
     })
 }
 // Publisher(data_)
