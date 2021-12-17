@@ -11,9 +11,9 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + speed + " " + time  + " forward"})
+            body: JSON.stringify({data_: "move " + speed + " " + time + " forward"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     function turnRight(e: any) {
@@ -24,7 +24,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "turn right"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     function turnLeft(e: any) {
@@ -35,7 +35,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "turn left"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     function forward(e: any) {
@@ -44,9 +44,9 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + 35 + " " + 1 + " forward"})
+            body: JSON.stringify({data_: "move " + 50 + " " + 1 + " forward"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     function backward(e: any) {
@@ -55,9 +55,9 @@ function VoitureAffichage(this: any) {
         const requestOptions = {
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({data_: "move " + 35 + " " + 1 + " backward"})
+            body: JSON.stringify({data_: "move " + 50 + " " + 1 + " backward"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     function reinitialise(e: any) {
@@ -68,7 +68,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "reinit ."})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     const pince = () => {
@@ -78,7 +78,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "pince " + handleChangePince()})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
     const lightDroite = () => {
         handleChangeDroite()
@@ -88,7 +88,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "light " + checkedGauche + " " + !checkedDroite + " 0"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
     const lightGauche = () => {
         handleChangeGauche()
@@ -98,7 +98,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "light " + !checkedGauche + " " + checkedDroite + " 0"})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
     function lightDuree(e: any) {
         e.preventDefault();
@@ -110,7 +110,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "light " + !checkedGauche + " " + checkedDroite + " " + duree})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     const [duree, setDuree] = React.useState( 0);
@@ -141,7 +141,7 @@ function VoitureAffichage(this: any) {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "servo " + numberServo + " " + positionServo})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     return <div className="margeGauche margeDroite">
