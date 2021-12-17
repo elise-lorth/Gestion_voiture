@@ -9,7 +9,7 @@ function PhotoAffichage() {
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data_: "paparazzi ."})
         };
-        fetch("/api", requestOptions);
+        fetch("http://localhost:3001/api", requestOptions);
     }
 
     return <div className="margeGauche margeDroite">
